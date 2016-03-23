@@ -1,0 +1,16 @@
+{
+  "name": "cpsc473webapi",
+  "version": "1.0.0",
+  "description": "Application created as a part of Assignment 5",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "nodemon": "^1.9.1"
+  }
+}
