@@ -7,8 +7,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 
 //Defining variables
-var hostname = "localhost";
-var port = "3000";
+var port = 3000;
 var app = express();
 
 //Initializing the output
@@ -30,6 +29,8 @@ app.post("/flip", function(req, res) {
     "use strict";
     //Randomly Select 'heads' or 'tails'
     var val = ["heads", "tails"][Math.round(Math.random())];
+	
+	//Output logs are just for demonstration purposes
     console.log("Value generated Randomly by the Computer is: " + val);
 
     //Read Data obtained fron the request body
@@ -52,7 +53,7 @@ app.post("/flip", function(req, res) {
 
 
 //Start the HTTP Server
-app.listen(port, hostname, function() {
+app.listen(port,function() {
     "use strict";
-    console.log("Server running at http://" + hostname + ":" + port + "/");
+    console.log("Server running at port " + port);
 });
