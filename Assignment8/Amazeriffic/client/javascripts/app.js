@@ -17,7 +17,6 @@ var main = function (toDoObjects) {
     
     $(".tabs a span").toArray().forEach(function (element) {
         var $element = $(element);
-
         // create a click handler for this element
         $element.on("click", function () {
             var $content,
@@ -32,13 +31,14 @@ var main = function (toDoObjects) {
             if ($element.parent().is(":nth-child(1)")) {
                 $content = $("<ul>");
                 for (i = toDos.length-1; i >= 0; i--) {
-                    $content.append($("<li>").text(toDos[i]));
-                    $content.slideDown( "slow" );
+                    //$content.append($("<li>").text(toDos[i]));
+                    $($("<li>").text(toDos[i])).appendTo($content).hide().slideDown();
+                   // $content.slideDown( "slow" );
                 }
             } else if ($element.parent().is(":nth-child(2)")) {
                 $content = $("<ul>");
                 toDos.forEach(function (todo) {
-                    $content.append($("<li>").text(todo));
+                    $($("<li>").text(todo)).appendTo($content).hide().slideDown();
                 });
 
             } else if ($element.parent().is(":nth-child(3)")) {
@@ -75,6 +75,7 @@ var main = function (toDoObjects) {
                     tag.toDos.forEach(function (description) {
                         var $li = $("<li>").text(description);
                         $content.append($li);
+                        $($("<li>").text(toDos[i])).appendTo($content).hide().slideDown();
                     });
 
                     $("main .content").append($tagName);
@@ -95,6 +96,7 @@ var main = function (toDoObjects) {
                         socket.emit("addTodos", newToDo);
                         $input.val("");
                         $tagInput.val("");
+                        alert("New values Added !!");
                 });
 
                 $content = $("<div>").append($inputLabel)
@@ -108,13 +110,12 @@ var main = function (toDoObjects) {
             return false;
         });
     });
-
     $(".tabs a:first-child span").trigger("click");
       
 };
 
 $(document).ready(function () {
-   socket.on("addTodos", function(toDoObjects){
+   socket.on("showTodo", function(toDoObjects){
         main(toDoObjects);
     });
 });

@@ -3,6 +3,7 @@
   "description": "The best ToDo list app in the history of the world",
   "version": "0.0.1",
   "dependencies": {
+    "foreman": "^1.4.1",
     "mongoose": "3.6.x",
     "socket.io": "~1.4.5"
   }
