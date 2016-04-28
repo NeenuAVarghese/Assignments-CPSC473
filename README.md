@@ -27,5 +27,12 @@
 12. For get requests http:\\localhost:3000\links can be used
 13. For increasing the count variable and redirection: http:\\localhost:3000\click\Facebook can be used
  
-`
-
+####Assignment 8
+1. Present Directory should be /home/vagrant in the node-box vagrant machine
+2. 'git clone https://github.com/NeenuAVarghese/Assignments-CPSC473.git'
+3. `cd Assignments-CPSC473/`
+3. 'cd Assignment8'
+4. 'cd Amazeriffic'
+5. 'npm install'
+6. 'foreman start -f Procfile'
+7. Access application on localhost port 3000
