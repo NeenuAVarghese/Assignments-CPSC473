@@ -1,7 +1,14 @@
+
+// Client-side code
+/* jshint browser: true, jquery: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, nonew: true, quotmark: double, undef: true, unused: true, strict: true, trailing: true */
+
+// Server-side code
+/* jshint node: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, nonew: true, quotmark: double, undef: true, unused: true, strict: true, trailing: true */
+
 "use strict";
+var io;
 var socket = io.connect();
 var main = function (toDoObjects) {
-    
     
     console.log("SANITY CHECK");
     
@@ -51,7 +58,6 @@ var main = function (toDoObjects) {
                         }
                     });
                 });
-                console.log(tags);
 
                 var tagObjects = tags.map(function (tag) {
                     var toDosWithTag = [];
@@ -65,7 +71,6 @@ var main = function (toDoObjects) {
                     return { "name": tag, "toDos": toDosWithTag };
                 });
 
-                console.log(tagObjects);
 
                 tagObjects.forEach(function (tag) {
                     var $tagName = $("<h3>").text(tag.name),
@@ -83,10 +88,10 @@ var main = function (toDoObjects) {
                 });
 
             } else if ($element.parent().is(":nth-child(4)")) {
-                    var $input = $("<input>").addClass("description"),
-                    $inputLabel = $("<p>").text("Description: "),
-                    $tagInput = $("<input>").addClass("tags"),
-                    $tagLabel = $("<p>").text("Tags: "),
+                    $input = $("<input>").addClass("description");
+                    var $inputLabel = $("<p>").text("Description: ");
+                    var $tagInput = $("<input>").addClass("tags");
+                    var $tagLabel = $("<p>").text("Tags: ");
                     $button = $("<span>").text("+");
 
                 $button.on("click", function () {

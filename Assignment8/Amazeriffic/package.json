@@ -1,10 +1,18 @@
 {
-  "name": "amazeriffic",
-  "description": "The best ToDo list app in the history of the world",
-  "version": "0.0.1",
+  "name": "amazeriffic-assignment8cpsc473",
+  "version": "1.0.0",
+  "description": "assignment 8 for cpsc473",
+  "main": "server.js",
   "dependencies": {
-    "foreman": "^1.4.1",
-    "mongoose": "3.6.x",
-    "socket.io": "~1.4.5"
-  }
+    "express": "^3.21.2",
+    "mongoose": "^4.4.14",
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
 }
