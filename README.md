@@ -30,6 +30,7 @@
 ####Assignment 8
 1. Present Directory should be /home/vagrant in the node-box vagrant machine
 2. 'git clone https://github.com/NeenuAVarghese/Assignments-CPSC473.git'
+3. `cd Assignments-CPSC473/`
 3. 'cd Assignment8'
 4. 'cd Amazeriffic'
 5. 'npm install'
