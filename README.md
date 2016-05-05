@@ -45,7 +45,7 @@
 3. `cd Assignments-CPSC473/`
 4. `cd Assignment9`
 5. `cd Part1`
-6. Double click the index.html file
+6. Open the index.html file in a browser to view the application
 
 #####Part 2
 1. Present Directory should be /home/vagrant in the node-box vagrant machine
