@@ -53,9 +53,8 @@
 3. `cd Assignments-CPSC473/`
 4. `cd Assignment9`
 5. `cd Amazeriffic`
-6. 'npm install'
-7. 'foreman start -f Procfile'
-8. Access application on localhost port 3000
+6. 'foreman start -f Procfile'
+7. Access application on localhost port 3000
 
 
 
