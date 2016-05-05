@@ -39,23 +39,23 @@
 
 
 ####Assignment 9
-Part 1
+#####Part 1
 1. Present Directory should be /home/vagrant in the node-box vagrant machine
 2. `git clone https://github.com/NeenuAVarghese/Assignments-CPSC473.git`
 3. `cd Assignments-CPSC473/`
-3. `cd Assignment9`
-4.  `cd Part1`
-5.  double click the index.html file
+4. `cd Assignment9`
+5. `cd Part1`
+6. Double click the index.html file
 
-Part 2
+#####Part 2
 1. Present Directory should be /home/vagrant in the node-box vagrant machine
 2. `git clone https://github.com/NeenuAVarghese/Assignments-CPSC473.git`
 3. `cd Assignments-CPSC473/`
-3. `cd Assignment9`
-4. `cd Amazeriffic`
-5. 'npm install'
-6. 'foreman start -f Procfile'
-7. Access application on localhost port 3000
+4. `cd Assignment9`
+5. `cd Amazeriffic`
+6. 'npm install'
+7. 'foreman start -f Procfile'
+8. Access application on localhost port 3000
 
 
 
