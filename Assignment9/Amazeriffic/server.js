@@ -1,26 +1,3 @@
-// Client-side code
-/* jshint browser: true, jquery: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, nonew: true, quotmark: double, undef: true, unused: true, strict: true, trailing: true */
-
-// Server-side code
-/* jshint node: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, nonew: true, quotmark: double, undef: true, unused: true, strict: true, trailing: true */
-/*{
-    "curly": true,
-    "eqeqeq": true,
-    "forin": true,
-    "immed": true,
-    "indent": 4,
-    "latedef": true,
-    "newcap": true,
-    "nonew": true,
-    "quotmark": "double",
-    "undef": true,
-    "unused": true,
-    "strict": true,
-    "trailing": true,
-    "node": true
-}*/
-
-"use strict";
 var express = require("express"),
     http = require("http"),
     // import the mongoose library
@@ -31,7 +8,7 @@ app.use(express.static(__dirname + "/client"));
 app.use(express.bodyParser());
 
 // connect to the amazeriffic data store in mongo
-mongoose.connect("mongodb://localhost/amazeriffic");
+mongoose.connect('mongodb://localhost/amazeriffic');
 
 // This is our mongoose model for todos
 var ToDoSchema = mongoose.Schema({
@@ -52,7 +29,7 @@ app.get("/todos.json", function (req, res) {
 app.post("/todos", function (req, res) {
     console.log(req.body);
     var newToDo = new ToDo({"description":req.body.description, "tags":req.body.tags});
-    newToDo.save(function (err) {
+    newToDo.save(function (err, result) {
 	if (err !== null) {
 	    // the element did not get saved!
 	    console.log(err);
@@ -70,3 +47,4 @@ app.post("/todos", function (req, res) {
 	}
     });
 });
+
